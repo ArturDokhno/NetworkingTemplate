@@ -10,9 +10,15 @@
 		7576B937274E555500576B6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7576B936274E555500576B6B /* AppDelegate.swift */; };
 		7576B939274E555500576B6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7576B938274E555500576B6B /* SceneDelegate.swift */; };
 		7576B93B274E555500576B6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7576B93A274E555500576B6B /* ViewController.swift */; };
-		7576B93E274E555500576B6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7576B93C274E555500576B6B /* Main.storyboard */; };
 		7576B940274E555600576B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7576B93F274E555600576B6B /* Assets.xcassets */; };
 		7576B943274E555600576B6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7576B941274E555600576B6B /* LaunchScreen.storyboard */; };
+		758646FB274EA03200A5B735 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 758646FA274EA03200A5B735 /* PromiseKit */; };
+		758646FE274EA03900A5B735 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 758646FD274EA03900A5B735 /* Alamofire */; };
+		75864702274EA05300A5B735 /* SessionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75864701274EA05300A5B735 /* SessionHelpers.swift */; };
+		75864704274EA06900A5B735 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75864703274EA06900A5B735 /* Todo.swift */; };
+		75864706274EA07F00A5B735 /* ConnectionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75864705274EA07F00A5B735 /* ConnectionSettings.swift */; };
+		75864708274EA09400A5B735 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75864707274EA09400A5B735 /* APIRouter.swift */; };
+		7586470F274EA1AD00A5B735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7586470E274EA1AD00A5B735 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +26,14 @@
 		7576B936274E555500576B6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7576B938274E555500576B6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7576B93A274E555500576B6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7576B93D274E555500576B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7576B93F274E555600576B6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7576B942274E555600576B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7576B944274E555600576B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75864701274EA05300A5B735 /* SessionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHelpers.swift; sourceTree = "<group>"; };
+		75864703274EA06900A5B735 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		75864705274EA07F00A5B735 /* ConnectionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionSettings.swift; sourceTree = "<group>"; };
+		75864707274EA09400A5B735 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		7586470E274EA1AD00A5B735 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				758646FB274EA03200A5B735 /* PromiseKit in Frameworks */,
+				758646FE274EA03900A5B735 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +70,33 @@
 			children = (
 				7576B936274E555500576B6B /* AppDelegate.swift */,
 				7576B938274E555500576B6B /* SceneDelegate.swift */,
+				7586470A274EA0AD00A5B735 /* Networking */,
 				7576B93A274E555500576B6B /* ViewController.swift */,
-				7576B93C274E555500576B6B /* Main.storyboard */,
+				7586470E274EA1AD00A5B735 /* Main.storyboard */,
 				7576B93F274E555600576B6B /* Assets.xcassets */,
 				7576B941274E555600576B6B /* LaunchScreen.storyboard */,
 				7576B944274E555600576B6B /* Info.plist */,
 			);
 			path = NetworkingTemplate;
+			sourceTree = "<group>";
+		};
+		75864709274EA09E00A5B735 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75864703274EA06900A5B735 /* Todo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7586470A274EA0AD00A5B735 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				75864709274EA09E00A5B735 /* Model */,
+				75864707274EA09400A5B735 /* APIRouter.swift */,
+				75864701274EA05300A5B735 /* SessionHelpers.swift */,
+				75864705274EA07F00A5B735 /* ConnectionSettings.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +115,10 @@
 			dependencies = (
 			);
 			name = NetworkingTemplate;
+			packageProductDependencies = (
+				758646FA274EA03200A5B735 /* PromiseKit */,
+				758646FD274EA03900A5B735 /* Alamofire */,
+			);
 			productName = NetworkingTemplate;
 			productReference = 7576B933274E555500576B6B /* NetworkingTemplate.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +147,10 @@
 				Base,
 			);
 			mainGroup = 7576B92A274E555500576B6B;
+			packageReferences = (
+				758646F9274EA03200A5B735 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				758646FC274EA03900A5B735 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 7576B934274E555500576B6B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,8 +166,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7576B943274E555600576B6B /* LaunchScreen.storyboard in Resources */,
+				7586470F274EA1AD00A5B735 /* Main.storyboard in Resources */,
 				7576B940274E555600576B6B /* Assets.xcassets in Resources */,
-				7576B93E274E555500576B6B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +178,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75864708274EA09400A5B735 /* APIRouter.swift in Sources */,
 				7576B93B274E555500576B6B /* ViewController.swift in Sources */,
 				7576B937274E555500576B6B /* AppDelegate.swift in Sources */,
+				75864706274EA07F00A5B735 /* ConnectionSettings.swift in Sources */,
+				75864702274EA05300A5B735 /* SessionHelpers.swift in Sources */,
 				7576B939274E555500576B6B /* SceneDelegate.swift in Sources */,
+				75864704274EA06900A5B735 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7576B93C274E555500576B6B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7576B93D274E555500576B6B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7576B941274E555600576B6B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,6 +396,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		758646F9274EA03200A5B735 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				branch = v6;
+				kind = branch;
+			};
+		};
+		758646FC274EA03900A5B735 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		758646FA274EA03200A5B735 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 758646F9274EA03200A5B735 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		758646FD274EA03900A5B735 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 758646FC274EA03900A5B735 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7576B92B274E555500576B6B /* Project object */;
 }
